@@ -7,6 +7,7 @@ use LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use LINE\LINEBot\Response;
 
 echo ("test 6");
+echo ("test 6");
 
 try {
 
