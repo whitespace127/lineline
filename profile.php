@@ -1,4 +1,9 @@
 <?php
+use LINE\LINEBot\Constant\Meta;
+use LINE\LINEBot\Exception\CurlExecutionException;
+use LINE\LINEBot\HTTPClient;
+use LINE\LINEBot\Response;
+
 echo ("test 3");
 
 try {
