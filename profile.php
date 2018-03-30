@@ -1,4 +1,5 @@
 <?php
+//GET https://api.line.me/v2/bot/profile/{goffee_}
 require "vendor/autoload.php";
 echo ("first <br>");
 include 'LINE/LINEBot.php';
@@ -8,7 +9,8 @@ echo ("3 <br>");
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
 echo ("4 <br>");
 
-$response = $bot->getProfile('fennxfoci');
+$response = $bot->getProfile('goffee_');
+echo $response;
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
