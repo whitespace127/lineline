@@ -11,20 +11,8 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
- 
-/*
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($strAccessToken);
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
-*/
 
-if($arrJson['events'][0]['message']['text'] == "Id" || $arrJson['events'][0]['message']['text'] == "id"){
- 
- /*
- $multipleMessageBuilder = new \LINE\LINEBot\MessageBuilder\MultiMessageBuilder();
- $multipleMessageBuilder->add(new TextMessageBuilder('Test1', 'Test2'));
- $res = $bot->replyMessage($arrJson['events'][0]['replyToken'], $multipleMessageBuilder);
- */
- 
+if($arrJson['events'][0]['message']['text'] == "Id" || $arrJson['events'][0]['message']['text'] == "id"){  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
