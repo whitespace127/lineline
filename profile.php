@@ -50,7 +50,7 @@ if ($response->isSucceeded()) {
 }
 //catch exception
 catch(Exception $e) {
-  echo 'Message: ' .$e->getMessage();
+  echo ('Message: ' .$e->getMessage());
 }
 
 ?>
