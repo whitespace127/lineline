@@ -15,6 +15,9 @@ if ($response->isSucceeded()) {
     echo $profile['pictureUrl'];
     echo $profile['statusMessage'];
 }
+else {
+   echo ("response fail <br>");
+}
 
 
 //$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Coba Text');
