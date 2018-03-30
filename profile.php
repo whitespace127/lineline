@@ -1,7 +1,6 @@
 <?php
 include 'LINE/LINEBot.php';
 namespace LINE\LINEBot\HTTPClient;
-require "vendor/autoload.php";
 
 use LINE\LINEBot\Constant\Meta;
 use LINE\LINEBot\Exception\CurlExecutionException;
