@@ -12,9 +12,9 @@ echo ("4 <br>");
 $response = $bot->getProfile('U69dfdebb75c8d6aaef5b6b440154115e');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
-    echo $profile['displayName'];
-    echo $profile['pictureUrl'];
-    echo $profile['statusMessage'];
+    echo "Display : " . $profile['displayName'];
+    echo "Picture : " . $profile['pictureUrl'];
+    echo "Message : " . $profile['statusMessage'];
 }
 else {
    echo ("response fail <br>");
