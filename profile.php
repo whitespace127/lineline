@@ -10,7 +10,6 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046d
 echo ("4 <br>");
 
 $response = $bot->getProfile('1570757358');
-echo $response;
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
