@@ -1,5 +1,13 @@
 <?php
-$EmpId = $_GET['empId'];
+$EmpId = "";
+$Message = "";
+
+$EmpId = $_GET['EmpId'];
+$Message = $_GET['Message'];
+
+if($Message == ""){
+    $Message = "helloxxx";
+}
 
 //GET https://api.line.me/v2/bot/profile/{goffee_}
 require "vendor/autoload.php";
@@ -24,7 +32,7 @@ else {
 */
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('uFbH4IE1NOr3gGSvQaRRT4Cd16wjPHBBTTVx9n3ew7Tiv0cGAKUzzMm1GPzwxUPJ0/tVCzRgEAn1Nyp+Vb2QaUMkoLxxzxLYGWUzz+M1pS6a7z11YyFBkiIr8f2iYTGlmbFXhGXT6QDpKCMt34wo2AdB04t89/1O/w1cDnyilFU=');
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('helloxxx');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($Message);
 $response = $bot->pushMessage($EmpId, $textMessageBuilder);
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
