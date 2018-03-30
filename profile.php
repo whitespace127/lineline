@@ -7,12 +7,22 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('zy9bDK/VoakRWSYKudJrh
 echo ("3 <br>");
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
 echo ("4 <br>");
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Coba Text');
+
+$response = $bot->getProfile('goffee_');
+if ($response->isSucceeded()) {
+    $profile = $response->getJSONDecodedBody();
+    echo $profile['displayName'];
+    echo $profile['pictureUrl'];
+    echo $profile['statusMessage'];
+}
+
+
+//$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('Coba Text');
 echo ("5 <br>");
-$response = $bot->pushMessage('goffee_', $textMessageBuilder);
+/* $response = $bot->pushMessage('goffee_', $textMessageBuilder);
 echo ("6 <br>");
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-
+*/
 
 /*namespace LINE\LINEBot\HTTPClient;
 
