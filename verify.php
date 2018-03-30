@@ -12,8 +12,10 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
+/*
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($strAccessToken);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
+*/
 
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  
