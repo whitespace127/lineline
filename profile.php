@@ -1,5 +1,4 @@
 <?php
-include 'LINE/LINEBot.php';
 namespace LINE\LINEBot\HTTPClient;
 
 use LINE\LINEBot\Constant\Meta;
