@@ -8,7 +8,7 @@ echo ("3 <br>");
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046df98f144a3df']);
 echo ("4 <br>");
 
-$response = $bot->getProfile('goffee_');
+$response = $bot->getProfile('fennxfoci');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
