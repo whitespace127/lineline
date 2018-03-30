@@ -1,4 +1,5 @@
 <?php
+require "vendor/autoload.php";
 echo ("first <br>");
 include 'LINE/LINEBot.php';
 echo ("2 <br>");
