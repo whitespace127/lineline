@@ -13,8 +13,8 @@ $response = $bot->getProfile('U69dfdebb75c8d6aaef5b6b440154115e');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo "Display : " . $profile['displayName'];
-    echo "Picture : " . $profile['pictureUrl'];
-    echo "Message : " . $profile['statusMessage'];
+    echo "<br>Picture : " . $profile['pictureUrl'];
+    echo "<br>Message : " . $profile['statusMessage'];
 }
 else {
    echo ("response fail <br>");
