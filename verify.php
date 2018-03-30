@@ -17,9 +17,11 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '63027787afefca74c046d
 
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  
+ /*
  $multipleMessageBuilder = new \LINE\LINEBot\MessageBuilder\MultiMessageBuilder();
  $multipleMessageBuilder->add(new TextMessageBuilder('Test1', 'Test2'));
  $res = $bot->replyMessage($arrJson['events'][0]['replyToken'], $multipleMessageBuilder);
+ */
  
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
